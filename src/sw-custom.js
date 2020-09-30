@@ -53,7 +53,7 @@ if ("function" === typeof importScripts) {
   
       // JS, CSS caching
       workbox.routing.registerRoute(
-        /\.(?:js|css)$/,
+        /\.(?:js|css|json)$/,
         workbox.strategies.staleWhileRevalidate({
           cacheName: "static-resources",
           plugins: [
