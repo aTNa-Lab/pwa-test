@@ -1,6 +1,5 @@
-const filesToCache = [
-    'https://raw.githubusercontent.com/KloopMedia/ElectionsMonitoringFormsConfig/master/config_v2.json'
-  ];
+const filesToCache = 'https://raw.githubusercontent.com/KloopMedia/ElectionsMonitoringFormsConfig/master/config_v2.json'
+
   
   const staticCacheName = 'pages-cache-v2';
 
@@ -10,11 +9,12 @@ const filesToCache = [
     event.waitUntil(
       caches.open(staticCacheName)
       .then(cache => {
-          return fetch(filesToCache[0])
+          return fetch(filesToCache)
           .then(response => response.json())
           .then(data => {
               console.log("Installing data from github")
               let urls = data.map(form => form.url)
+              urls.push(filesToCache)
               console.log("URLS: ", urls)
               return cache.addAll(urls);
           })
