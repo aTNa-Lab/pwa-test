@@ -14,7 +14,7 @@ function App() {
   const [data, setData] = useState(null)
 
   useEffect(() => {
-    const urlString = queryString.parse(window.location.search);
+    const urlString = queryString.parse(window.location.search, {decode: false});
     if (urlString.url) {
       fetch(urlString.url)
       .then((r) => r.json())

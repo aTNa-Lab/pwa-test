@@ -1,6 +1,5 @@
 const filesToCache = [
-    '/src/pages/offline.html',
-    '/src/pages/404.html'
+    '/'
   ];
   
   const staticCacheName = 'pages-cache-v2';
@@ -10,7 +9,7 @@ const filesToCache = [
     event.waitUntil(
       caches.open(staticCacheName)
       .then(cache => {
-        return cache.addAll(filesToCache);
+        return cache.addAll("https://raw.githubusercontent.com/KloopMedia/ElectionsMonitoringFormsConfig/master/config_v2.json");
       })
     );
   });
