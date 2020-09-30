@@ -41,13 +41,13 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to={"/" + window.location.search}>Home</Link>
+              <Link to={"/pwa-test/" + window.location.search}>Home</Link>
             </li>
             <li>
-              <Link to={"/about" + window.location.search}>About</Link>
+              <Link to={"/pwa-test/about" + window.location.search}>About</Link>
             </li>
             <li>
-              <Link to={"/users" + window.location.search}>Users</Link>
+              <Link to={"/pwa-test/users" + window.location.search}>Users</Link>
             </li>
           </ul>
         </nav>
@@ -55,13 +55,13 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
+          <Route path="/pwa-test/about">
             <About />
           </Route>
-          <Route path="/users">
+          <Route path="/pwa-test/users">
             <Users />
           </Route>
-          <Route path="/">
+          <Route path="/pwa-test/">
             <Home />
           </Route>
         </Switch>
