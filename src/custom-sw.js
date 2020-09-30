@@ -1,7 +1,6 @@
 const filesToCache = [
-    '/',
-    '/public/index.html',
-    '/public/favicon.ico'
+    '/src/pages/offline.html',
+    '/src/pages/404.html'
   ];
   
   const staticCacheName = 'pages-cache-v2';
