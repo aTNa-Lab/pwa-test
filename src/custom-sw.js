@@ -5,11 +5,11 @@ const filesToCache = [
   const staticCacheName = 'pages-cache-v2';
   const queryString = require('query-string');
 
-  const urlString = queryString.parse(self.location.search, {decode: false});
+  const urlString = queryString.parse(self.location, {decode: false});
   
   self.addEventListener('install', event => {
     console.log('Attempting to install service worker and cache static assets');
-    console.log("URL: ", urlString.url)
+    console.log("URL: ", urlString)
     event.waitUntil(
       caches.open(staticCacheName)
       .then(cache => {
