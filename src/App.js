@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
@@ -41,13 +41,13 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to={"/pwa-test/" + window.location.search}>Home</Link>
+              <Link to={"/"}>Home</Link>
             </li>
             <li>
-              <Link to={"/pwa-test/about" + window.location.search}>About</Link>
+              <Link to={"/about"}>About</Link>
             </li>
             <li>
-              <Link to={"/pwa-test/users" + window.location.search}>Users</Link>
+              <Link to={"/users"}>Users</Link>
             </li>
           </ul>
         </nav>
@@ -55,13 +55,13 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/pwa-test/about">
+          <Route path="/about">
             <About />
           </Route>
-          <Route path="/pwa-test/users">
+          <Route path="/users">
             <Users />
           </Route>
-          <Route path="/pwa-test/">
+          <Route path="/">
             <Home />
           </Route>
         </Switch>
