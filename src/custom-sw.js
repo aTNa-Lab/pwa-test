@@ -1,6 +1,5 @@
 const filesToCache = [
-    '/src/pages/offline.html',
-    '/src/pages/404.html'
+    'https://raw.githubusercontent.com/KloopMedia/ElectionsMonitoringFormsConfig/master/config_v2.json'
   ];
   
   const staticCacheName = 'pages-cache-v2';
