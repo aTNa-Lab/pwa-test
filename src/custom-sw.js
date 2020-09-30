@@ -9,7 +9,7 @@ const filesToCache = [
     event.waitUntil(
       caches.open(staticCacheName)
       .then(cache => {
-        return cache.addAll("https://raw.githubusercontent.com/KloopMedia/ElectionsMonitoringFormsConfig/master/config_v2.json");
+        return cache.add("https://raw.githubusercontent.com/KloopMedia/ElectionsMonitoringFormsConfig/master/config_v2.json");
       })
     );
   });
