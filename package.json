@@ -17,8 +17,8 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "react-scripts start && cra-append-sw --mode dev ./custom-sw.js", 
-    "build": "react-scripts build && cra-append-sw ./custom-sw.js",
+    "start": "react-scripts start && cra-append-sw --mode dev ./src/custom-sw.js", 
+    "build": "react-scripts build && cra-append-sw ./src/custom-sw.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
